@@ -149,10 +149,6 @@ Aside命名的是主流心理学和行为经济学中已有文献的认知现象
 - 代码：MIT
 - 任何摘自维基百科的内容：CC-BY-SA（单条标注）
 
-## 致敬
-
-灵感来自 `skills.sh` 生态，特别是：
-- [`alchaincyf/nuwa-skill`](https://github.com/alchaincyf/nuwa-skill) · 女娲.skill
-- [`alchaincyf/darwin-skill`](https://github.com/alchaincyf/darwin-skill) · 达尔文.skill
+## 学术引用
 
 条目引用的学者：Daniel Kahneman、Amos Tversky、Dan Ariely、Robert Cialdini、Leon Festinger、Daniel Gilbert、Russell Belk、Nolen-Hoeksema、Abramowitz。
