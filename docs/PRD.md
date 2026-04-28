@@ -121,11 +121,13 @@ owner亲手定的 Mirror 语气 template：
 
 ### Structural format (must be verbatim, do not rephrase into prose)
 
+**Canonical template — see `templates/output.md` and `SKILL.md` for the source of truth. This block must match those byte-for-byte.**
+
 ```markdown
-> 🪞 **Aside** · [Pattern Name]
-> 原话："[user's actual words]"
-> 这个表达和 [pattern description] 这个现象有点像（[Source]）。
-> 也许值得回头看一眼。
+> 🪞 **Aside**
+> 顺便一提——你刚才说「[user's exact words, 10-20 characters]」，
+> 很像 [中文模式名] 这个现象（[Source, Year]）。
+> 不一定完全对得上，也许值得回头看一眼。
 ```
 
 ### Banned phrases (SKILL.md hard constraint)

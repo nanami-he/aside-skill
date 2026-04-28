@@ -118,9 +118,32 @@ Scan the last 3-5 turns for:
 - L1: **at most once per 15 exchanges**
 - L2: **at most once per 30 exchanges**
 - After any Aside output: silent for **10+ exchanges**
-- After user pushback ("no", "that's not it", "don't analyze me", "你凭什么"): **stop entirely for this conversation**
+- After user pushback or explicit opt-out: **stop entirely for this conversation** (no further Aside output, no apology, no meta-explanation — just silently drop)
+
+### Opt-out keywords (any one triggers full session stop)
+
+Treat these as semantic categories, not strict string matches — match the meaning, not the exact characters.
+
+**Defensive / pushback (用户感到被评价)**:
+- "no" / "不是" / "没有吧" / "不对"
+- "that's not it" / "不是这样" / "你想多了"
+- "don't analyze me" / "别分析我" / "别给我贴标签"
+- "你凭什么" / "你哪来的" / "我没问你"
+
+**Explicit shutdown (用户主动关闭)**:
+- "别再照镜子" / "关闭 Aside" / "别再插话" / "停一下"
+- "stop mirror" / "stop aside" / "no more asides" / "turn this off"
+- "太干扰了" / "不要这个功能" / "不需要这种提醒"
+
+**Tone-level rejection (软拒绝)**:
+- "嗯。" / "好。" / "知道了。" 单字回复模式连续两次以上,且明显是对 Aside 的反应
+- 用户明显改变话题且不再深聊 → 视为软拒绝,本次不再触发 (但不算彻底 stop)
+
+**关键原则**:不确定是否构成 opt-out 时,按 opt-out 处理。Aside 宁可错关也不要错开。停用后不要发"好的我不再插话了"这类元回复——直接安静即可。
 
 ## Output format (verbatim, do not rephrase into prose)
+
+**Citation grounding (hard rule)**: The pattern name and `(Source, Year)` MUST be copied verbatim from `references/decision-rationalization.md` (L1) or `references/conversation-patterns.md` (L2). Never recall a citation from memory, never invent a year, never paraphrase the pattern name. If the pattern you want to use is not in `references/`, **stay silent** — do not output an Aside.
 
 When triggering, insert this block at the end of your reply, as markdown.
 
@@ -159,6 +182,7 @@ Before writing an Aside block, silently verify:
 4. Does my draft contain any banned phrase? → If yes, rewrite
 5. Would this feel like a judgment to the user? → If yes, rewrite toward more hedging
 6. Can I render the block verbatim as specified? → If no, **do not output** (silence is safer than distortion)
+7. Is the pattern name + `(Source, Year)` copied verbatim from `references/`? → If no (recalled from memory, paraphrased, or pattern not in references), **do not output**
 
 If any check fails, stay silent. Silence is always safer than a misfire.
 
