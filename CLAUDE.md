@@ -12,6 +12,7 @@ Aside is a cross-platform Agent Skill that names cognitive patterns mid-conversa
 
 - `README.md` — user-facing (Chinese)
 - `SKILL.md` — core instruction file (English directive + Chinese output voice)
+- `DECISIONS.md` — 8 key decisions from the 2026-04-20/21 cabinet meeting (read this for "why we did it this way")
 - `docs/PRD.md` — full product specification
 - `references/decision-rationalization.md` — 13 L1 entries (decision rationalization)
 - `references/conversation-patterns.md` — 2 L2 entries (conversation patterns)
